@@ -1,5 +1,6 @@
 <?php
 
+
 //function inputProg ($int){
 //
 //        $intOst = $int %10;
@@ -39,14 +40,6 @@
 //}
 
 
-
-
-
-
-
-
-
-
 //$counter = 0;
 //$f = 1;
 //$s = 1;
@@ -64,7 +57,6 @@
 //}
 
 
-
 //Занимательные задачи PHP 26 мая 2014 в 10:49
 //Напишите функцию, которая добавляет правильные окончания существительным. Пример:
 //0 яблок
@@ -80,9 +72,6 @@
 //P.S. Старайтесь, чтобы ваше решение было
 //1. Изящным (не говнокод, а красивое решение)
 //2. Быстрым (не выполняющим лишних действий)
-
-
-
 
 
 //function apple($n,$arr) {
@@ -105,14 +94,6 @@
 //    }
 //
 //
-
-
-
-
-
-
-
-
 
 
 //function apple($n){
@@ -139,12 +120,7 @@
 //  }
 
 
-
-
 //Вывести на экран все счастливые билеты. Счастливый билет - это когда сумма первых трех цифр в номере билета равна сумме второй тройки цифр (номер шестизначный). Подсчитайте сколько счастливых билетов существует и какой % они составляют от общего числа билетов.
-
-
-
 
 
 //$arrTickets = range(100000,999999);
@@ -202,9 +178,6 @@
 // PHP.).
 
 
-
-
-
 //    function rew($arr){
 ////Берем длинну массива
 //        $len_array = count($arr);
@@ -239,14 +212,13 @@
 //
 // var_dump(rew ($arr));
 //var_dump($arr);
- //var_dump(array_values($arr)) ;
- //var_dump(rew($arr));
+//var_dump(array_values($arr)) ;
+//var_dump(rew($arr));
 
 //$arr
 
 
-
-   // function reversMy($arr) {
+// function reversMy($arr) {
 //    $values = array_values($arr); //достаем зачения массива
 //    $keys = array_keys($arr);// достаем ключи массива
 //    $newValues = array();
@@ -274,11 +246,9 @@
 //var_dump($arr);
 
 
-
-
-function countMy($arr){
+function countMy($arr) {
     $count = 0;
-    foreach($arr as $elem){
+    foreach ($arr as $elem) {
         $count++;
     }
     echo $count;
@@ -341,14 +311,14 @@ function countMy($arr){
 //$str = $str[0]." ".$str[1]." ".$str[2].$str[3];
 //echo $str;
 
-
+//-------------
 //Дано число. Разложите его на простые множители.
 // Пример: 12 - это 2 * 2 * 3.
 
 
 //простое чило или нет простое число которое делится без остатка на себя и 1;
-
-//$n = 12;
+//..НЕ РЕШЕНО!!!!
+////$n = 12;
 //$rasl = array();
 //for ($i=2;$i<=$n;$i++) {
 //    if (($n % $i) == 0) {
@@ -379,13 +349,10 @@ function countMy($arr){
 //}
 
 
-
-
-
 //echo ($rasl);
 
 //var_dump ($arr) ;
-
+//-------------------
 
 //1. Поиск и сортировка
 //Дано массив целых чисел $a, отсортированный по возрастанию и некое число $b.
@@ -449,8 +416,6 @@ function countMy($arr){
 //}
 
 
-
-
 //Написать свой варинт функции strrev(), не используя стандартные функции вроде strrev()
 //Пример:
 //Дано $s=‘Hello!’;
@@ -487,7 +452,6 @@ function countMy($arr){
 //
 //}
 //echo $count;
-
 
 
 //добавление к числу 0  спереди то 6 знаков
@@ -538,20 +502,330 @@ function countMy($arr){
 
 //В сценарии php-1-02.php создайте переменные $num1, $num2, присвойте им значения 25.464 и 321 соответственно. Объявите константу $const1 со значением 312. Cоздайте переменную $num3 со значением 8, установите тип integer для этой переменной, используя функцию settype. В окне обозревателя для каждой переменной выведите информацию о ее типе в формате:
 
-$num1  = 24.464;
-$num2  = 312;
+//$num1  = 24.464;
+//$num2  = 312;
+//
+////cons(const1:312);
+//
+//define('const1',312);
+//$num3 = 8;
+//settype($num3,'integer' );
+//
+//
+//echo 'VariableName: $num1 - VariableType:' . gettype ($num1) . "<hr><br>";
+//echo 'VariableName: $num2 - VariableType:' . gettype ($num2) . "<hr><br>";
+//echo 'VariableName: const1 - VariableType:' . gettype (const1) . "<hr><br>";
+//echo 'VariableName: $num3 - VariableType:' . gettype ($num3) . "<hr><br>";
 
-//cons(const1:312);
 
-define('const1',312);
-$num3 = 8;
-settype($num3,'integer' );
+//header('Content-Type: text/plain');
+//echo "function arr('$arr'){
+//     for($i = 0;$i < 12; $i++)
+//
+//}";
+
+/// функцция выводит сама себя;
+//    function inputMy(){
+//        header('Content-Type: text/plain');
+//
+//        print_r("
+//        function inputMy (){
+//            header('Content-Type: text/plain');
+//             print_r(\"function inputMy ()\");
+//         }");}
+//
+//
+//
+//
+//    inputMy();
+
+//Создайте сценарий php-1-03.php, который для чисел 518 и 37 находит
+//наибольший общий делитель и выводит в строке обозревателя сообщение вида
+//"Наибольший общий делитель чисел 518 и 37 равен Result.", где Result - наибольший
+//общий
+//делитель заданных чисел.
 
 
-echo 'VariableName: $num1 - VariableType:' . gettype ($num1) . "<hr><br>";
-echo 'VariableName: $num2 - VariableType:' . gettype ($num2) . "<hr><br>";
-echo 'VariableName: const1 - VariableType:' . gettype (const1) . "<hr><br>";
-echo 'VariableName: $num3 - VariableType:' . gettype ($num3) . "<hr><br>";
+function divider($n, $b) {
+
+    $divN = [];
+    $divB = [];
+    for ($i = 2; $i < $n; $i++) {
+        if ($n % $i == 0) {
+            $divN[] .= $i;
+        }
+    }
+    for ($g = 2; $g < $b; $g++) {
+        if ($b % $g == 0) {
+            $divB[] .= $g;
+        }
+    }
+
+    var_dump($divN);
+    var_dump($divB);
+
+}
+
+//var_dump( $divid = array_intersect($divN,$divB));
+//        foreach ($divid as $elem){
+//
+//            echo $result  =  $elem ;
+//        }
+
+//}
+// divider(420,990);
+
+//echo 10%7;
+
+//for($i = 2; $i < 10;$i++){
+//
+//    if (10 % $i !== 0){
+//        echo 10 % $i, "<br>";
+//    }
+//
+//
+//
+//}
+
+//$a=1952;
+//for ($i=1; $i<=$a; $i++){
+//
+//
+//        $res = $a % $i;
+//
+//        echo " $a % $i = $res  <br>";
+//
+//
+//    }
+
+//---------------------------------------
+//Создайте сценарий php-1-05.php, который в окне обозревателя выводит
+// значение площади трапеции со сторонами length1,
+//length2, length3 и length4. Если в ходе работы сценария возникли ошибки, в обозреватель должно быть выведено
+//сообщение, имеющее следующий вид:
+
+//Ошибка ErrorAction.
+//ErrorCause.
+
+//где ErrorAction - действие, вызвавшее ошибку, ErrorCause - причина ошибки.
+
+// function trap ($length1,$length2,$length3,$length4){
+//
+//    $arr =[$length1,$length2,$length3,$length4]; //создаем  массив с пришедшими значениями
+//    $error = [];// массив ошибок
+//      for($i = 0;$i<3;$i++){// перебираем массив
+//        if (!is_int($arr[$i]) && !is_float($arr[$i]) ){// проверка га целое и дробное число
+//            $error [] .=   "ErrorAction:" . " " . $arr[$i] .' ---input not integer!!!---
+//                <br> ErrorCause:input  integer  ';
+//
+//        }}
+//     if($length3 != $length4){//проверка на равнобедренную трп=апецию
+//         $error [] .=   "ErrorAction" . " " . $arr[$i] .' $length3 not equal $length4
+//         <br> ErrorCause:input  integer  ';// если не так пишем в еррор
+//     }
+//        if (empty($error)){// если массив с ошибками пустой записываем переменные
+//            //  в  формулу нахождения площади раввнобедренной трапеции
+//           $pat1 =  ($length1 + $length2) / 2;
+//           $pat2 =   pow($length3,2);
+//           $pat3 = pow($length1 - $length2,2) + pow($length3,2) - pow($length4,2);
+//           $pat4 = 2 * ($length1 - $length2);
+//
+//           $itog =  $pat2 - pow($pat3 / $pat4,2);
+//
+//
+//           $squ = "S = ". ceil(sqrt($itog) * $pat1);
+//
+//
+//            echo $squ;// выводим результат
+//        }else{// если есть ошибки выводим
+//            foreach($error as $elem){
+//
+//                echo "<p style='color: red'>$elem </p>" ;
+//            }
+//
+//
+//        }
+//
+// }
+//
+//trap(10,9,24,25);
 
 
+//echo "<br>" . pow(4, 1/3);
+//----------------------------------------
+
+//В сценарии php-1-08.php, создайте индексируемый массив из 10 элементов типа integer,
+// содержащий числа от -3 до 23. В созданном массиве замените нулями все положительные элементы,
+// В окне обозревателя выведите исходный массив и массив,
+// полученный после преобразования. В случае возникновения ошибок должно быть выведено сообщение:
+//Ошибка ErrorAction.
+//    ErrorCause.
+
+//$arr = [];
+//for ($i = 1; $i < 10; $i++) { //создаем массив
+//    $arr [] .= mt_rand(-22, 23);
+//}
+//
+//$arrNew = []; // новый массив
+//echo "<table style=''>";
+//echo "<tr>";
+//foreach ($arr as $elem) { //перебираем и выволим массив со всеми числами
+//    echo "<td style='border:1px solid black; width:20px; text-align: center;'>";
+//    echo $elem . "<br>";
+//    echo "</td>";
+//    if ($elem < 0) { // если число меньше ноля пишем в новый массив елемент
+//        $arrNew [] .= $elem;
+//    } else {// если больше пишем 0
+//        $arrNew [] .= 0;
+//    }
+//}
+//echo "</tr>";
+//echo "<tr>";
+//foreach ($arrNew as $elem) { //выводим  новый массив
+//    echo "<td style='border:1px solid black; width:20px; text-align: center;'>";
+//    echo $elem . "<br>";
+//}
+////var_dump($arrNew);
+//echo "</tr>";
+//echo "</table>";
+
+
+//------------------------
+//0. В сценарии php-1-10.php создайте массив $sequence из 10 элементов типа int,
+//используя явную и смещенную индексацию и подсчитайте произведение максимального и
+//минимального элементов этого массива. В обозревателе выведите сообщение
+//"Произведение максимального элемента массива MaxElement и минимального элемента массива
+//MinValue равно Result.", где MaxElement - максимальный элемент массива, MinValue -
+//инимальный элемент массива,
+//Result - произведение максимального и минимального элементов массива.
+
+
+//function minMax($n){
+
+//    $arr = [];
+//
+//    for($i= 2;$i < $n;$i++){
+//
+//        $add = mt_rand(5, 20);
+//
+//
+//
+//
+//        $arr[] .= $add ;
+//            }
+
+
+    //var_dump($arr);
+// foreach($arr as $elem){
+//     echo $elem ."-";
+// }
+//
+//
+//    $maxElement = max($arr);
+//    $minValue = min($arr);
+//    $result = $maxElement * $minValue;
+//    return  "Произведение максимального элемента массива MaxElement: $maxElement и минимального элемента массива
+//MinValue:$minValue  равно Result:$result";
+//}
+//
+//
+//
+// echo minMax(10);
+//
+//
+////echo range(5,100);
+//-----------------------------------
+
+//function triangle($length1,$length2) {
+//
+//    $arrPar = [$length1, $length2]; //массив с данными
+//    $error = []; // МАССИВ С ОШИБКАМИ
+//    for ($i = 0; $i < 2; $i++) {
+//
+//        if (!is_int($arrPar[$i]) && !is_float($arrPar[$i])) {// проверка гначисло
+//            $error [] .= "<p style='color:red'>ErrorAction: input not number</p>// пишем в еррор
+//                          <p>ErrorCause: input number</p>";
+//        }
+//        if ($arrPar[$i] == 0) {// проверка на ноль
+//            $error [] .= "<p style='color:red'>ErrorAction: input 0</p>
+//                          <p>ErrorCause: input number > 0 </p>";
+//        }
+//        $sumlength1 = $arrPar[$i] + $arrPar[$i];// поверка на равнобедренный
+//        if ($sumlength1 < $length2) {
+//            $error [] .= "<p style='color:red'>ErrorAction: input length2 noy correct</p>
+//                          <p>ErrorCause: input length2 number as not big lengrh1 + length1  number > 0 </p>";
+//        }
+//    }
+//    if (empty($error)) {// если пусто
+//        $path1 = $length2 / 4;
+//        $path2 = sqrt(4 * pow($length1, 2) - pow($length2, 2));
+//        $square =  round($path1 * $path2,3);
+//        echo "Площадь прямоугольника со сторонами $length1 и $length2 равна $square m<sup>2</sup>
+//                    где $length1 и $length2 - длины сторон прямоугольника";
+//        } else {
+//        echo $error[0];
+//    }
+//}
+//
+//triangle(5,9);
+
+//------------------------------------
+//В сценарии php-1-11.php с использованием функции array создайте ассоциативный массив $people из 5 элементов. Ключами
+//массива должны быть фамилии людей, а элементами - имена. В обозревателе выведите сообщение следующего вида:
+
+//Key1 Value1
+//.
+//.
+//.
+//Key5 Value5
+//где Key - ключ ассоциативного массива, а Value - значение элемента массива с индексом Key.
+//В случае возникновения ошибки должно быть выведено сообщение вида:
+//Ошибка ErrorAction.
+//    ErrorCause.
+
+
+
+$arr = array(
+            'Tsybin'=>'Anatoliy',
+            'Ivanov'=>'Dima',
+            'Zlobin'=>'Vasy',
+            'Dmitrov'=>'Anatoliy',
+            'Laxin'=>'Roman'
+            );
+
+
+
+
+
+$k = 1;
+$v = 1;
+echo"<table style='text-align: center; border:1px solid red'>";
+
+foreach($arr as  $key => $value){
+
+
+    echo "<tr>";
+        echo "<td style='font-size: 12px;'>" . "Key" . $k++ . "</td>";
+        echo "<td style='font-size: 12px;'>" . "value" . $v++;
+    echo "</tr>";
+
+    echo "<tr>";
+        echo "<td>" . $key . "</td>";
+        echo "<td>" . $value . "</td>";
+        echo "</tr>";
+
+
+
+
+
+
+   //echo  "<td>" .$key . " " . $value . "</td> ";
+
+
+
+}
+
+
+echo"</table>";
+?>
 
