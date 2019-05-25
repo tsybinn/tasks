@@ -245,14 +245,14 @@
 
 //var_dump($arr);
 
-
-function countMy($arr) {
-    $count = 0;
-    foreach ($arr as $elem) {
-        $count++;
-    }
-    echo $count;
-}
+//
+//function countMy($arr) {
+//    $count = 0;
+//    foreach ($arr as $elem) {
+//        $count++;
+//    }
+//    echo $count;
+//}
 
 //countMy($arr);
 
@@ -284,6 +284,10 @@ function countMy($arr) {
 //        return $n * fac($n-1);
 //    }
 //}
+
+
+
+
 ////факториал циклом
 // function fact ($n){
 //
@@ -299,6 +303,8 @@ function countMy($arr) {
 //
 //
 // echo fact(5);
+
+
 
 
 //Дана строка. Удалите из нее третий пробел. Пример: строка '12 34 56 78' станет '12 34 5678'.
@@ -546,25 +552,25 @@ function countMy($arr) {
 //делитель заданных чисел.
 
 
-function divider($n, $b) {
-
-    $divN = [];
-    $divB = [];
-    for ($i = 2; $i < $n; $i++) {
-        if ($n % $i == 0) {
-            $divN[] .= $i;
-        }
-    }
-    for ($g = 2; $g < $b; $g++) {
-        if ($b % $g == 0) {
-            $divB[] .= $g;
-        }
-    }
-
-    var_dump($divN);
-    var_dump($divB);
-
-}
+//function divider($n, $b) {
+//
+//    $divN = [];
+//    $divB = [];
+//    for ($i = 2; $i < $n; $i++) {
+//        if ($n % $i == 0) {
+//            $divN[] .= $i;
+//        }
+//    }
+//    for ($g = 2; $g < $b; $g++) {
+//        if ($b % $g == 0) {
+//            $divB[] .= $g;
+//        }
+//    }
+//
+//    var_dump($divN);
+//    var_dump($divB);
+//
+//}
 
 //var_dump( $divid = array_intersect($divN,$divB));
 //        foreach ($divid as $elem){
@@ -661,6 +667,47 @@ function divider($n, $b) {
 //Ошибка ErrorAction.
 //    ErrorCause.
 
+
+
+
+//$arrM = [];
+//$arrP = [];
+//    for($i = 0;$i <= 27;$i++){
+//
+//        $arrM [] .=mt_rand(-3,23);
+//
+//    }
+//
+//for($i = 0;$i < count($arrM);$i++){
+//     if ($arrM[$i] > 0){
+//
+//        $arrP [] .= 0;
+//
+//    } else {
+//        $arrP [] .=$arrM[$i];
+//    }
+//
+//
+//}
+//echo "<table>";
+//echo "<tr>";
+//foreach($arrM as $value){
+//
+//echo " <td style='border:1px solid black; '>" . $value . "</td>";
+//
+//}
+//echo "</tr>";
+//echo "<tr>";
+//foreach($arrP as $value){
+//    echo  "<td style='border:1px solid black; width:20px;'>" . $value . "</td>";
+//
+//
+//}
+//echo "</tr>";
+//echo "</table>";
+
+
+
 //$arr = [];
 //for ($i = 1; $i < 10; $i++) { //создаем массив
 //    $arr [] .= mt_rand(-22, 23);
@@ -707,13 +754,8 @@ function divider($n, $b) {
 //    for($i= 2;$i < $n;$i++){
 //
 //        $add = mt_rand(5, 20);
-//
-//
-//
-//
-//        $arr[] .= $add ;
+////        $arr[] .= $add ;
 //            }
-
 
     //var_dump($arr);
 // foreach($arr as $elem){
@@ -783,49 +825,416 @@ function divider($n, $b) {
 //Ошибка ErrorAction.
 //    ErrorCause.
 
+//
+//
+//$arr = array(
+//            'Tsybin'=>'Anatoliy',
+//            'Ivanov'=>'Dima',
+//            'Zlobin'=>'Vasy',
+//            'Dmitrov'=>'Anatoliy',
+//            'Laxin'=>'Roman'
+//            );
+//
+//
+//
+//
+//
+//$k = 1;
+//$v = 1;
+//echo"<table style='text-align: center; border:1px solid red'>";
+//
+//foreach($arr as  $key => $value){
+//
+//
+//    echo "<tr>";
+//        echo "<td style='font-size: 12px;'>" . "Key" . $k++ . "</td>";
+//        echo "<td style='font-size: 12px;'>" . "value" . $v++;
+//    echo "</tr>";
+//
+//    echo "<tr>";
+//        echo "<td>" . $key . "</td>";
+//        echo "<td>" . $value . "</td>";
+//        echo "</tr>";
+//
+//
+//
+//
+//
+//
+//   //echo  "<td>" .$key . " " . $value . "</td> ";
+//
+//
+//
+//}
+//
+//
+//echo"</table>";
 
 
-$arr = array(
-            'Tsybin'=>'Anatoliy',
-            'Ivanov'=>'Dima',
-            'Zlobin'=>'Vasy',
-            'Dmitrov'=>'Anatoliy',
-            'Laxin'=>'Roman'
-            );
+//Занимательные задачи PHP 26 мая 2014 в 10:49
+//Напишите функцию, которая добавляет правильные окончания существительным. Пример:
+//0 яблок
+//1 яблоко
+//2 яблока
+//3 яблока
+//4 яблока
+//5 яблок
+//и так далее.
+//
+//Подсказка: функция должна принимать массив вариантов ('яблоко', 'яблока', 'яблок').
+//
+//P.S. Старайтесь, чтобы ваше решение было
+//1. Изящным (не говнокод, а красивое решение)
+//2. Быстрым (не выполняющим лишних действий)
+//
+//function addApple($appleO,$appleA, $appleK){ //решение через строку ГОВНОКОД
+//
+//    $arrApple = [$appleO,$appleA,$appleK];
+//
+//    for($i = 0;$i < 100;$i++){
+//            $i = "$i";
+//
+//          if($i <= 9)  {
+//        if ($i[0] == 0){
+//            echo $i . "-".$appleK ."<br>";
+//        }
+//        if($i[0] == 1){
+//            echo $i . "-".$appleO ."<br>";
+//        }
+//        if($i[0] == 2 or $i == 3 or $i == 4) {
+//            echo $i . "-".$appleA ."<br>";
+//        }
+//                  }
+//
+//          if($i > 4 && $i <= 20){
+//              echo $i. "-".$appleK ."<br>";
+//          }
+//
+//        if( $i > 20){
+//            if ($i[1] == 0){
+//                echo $i . "-".$appleK ."<br>";
+//            }
+//            if($i[1] == 1){
+//                echo $i . "-".$appleO ."<br>";
+//            }
+//            if($i[1] == 2 or $i[1] == 3 or $i[1] == 4) {
+//                echo $i . "-".$appleA ."<br>";
+//            }
+//            if($i[1] > 4  ){
+//                echo $i. "-".$appleK ."<br>";
+//            }
+//
+//                    }
+//    }
+//
+//
+//}
+//
+////addApple ('яблоко', 'яблока', 'яблок');
+//
+//
+//
+//
+//function lastVersion($appleO,$appleA, $appleK){
+//$elem = '';
+//    for($i = 0;$i < 200;$i++){
+//        $ost = $i % 10; // остаток любого числа на 10 возвращает последнюю цифру этого числа
+//        if($ost == 0){
+//            $elem = $appleK;
+//        }
+//        if($ost == 1){
+//            $elem = $appleO;
+//        }
+//        if($ost == 2 OR $ost == 3 OR $ost == 4){
+//            $elem = $appleA;
+//        }
+//        if($ost >= 5 && $ost <= 9){
+//            $elem = $appleK;
+//        }
+//        if($i > 10 && $i <= 20){
+//            $elem = $appleK;
+//        }
+//        if($i > 110 && $i <= 120){
+//            $elem = $appleK;
+//        }
+//        echo $i ."-". $elem ."<br>";
+//    }}
+//
+//lastVersion('яблоко', 'яблока', 'яблок');
+//
+//--------------------------------------------------
+//
+//В сценарии php-1-12.php определите переменные $num1 и $num2 и присвойте им обеим значение 12,33.
+//Для переменной $num2 задайте тип real. Проверьте переменные на эквивалентность,
+//в обозревателе выведите сообщение о результате.
+
+//
+//$num1 = 12;
+//$num2 = 33;
+//$num2 = (real)33;
+//
+//
+//var_dump($num1);
+//var_dump($num2);
+
+//-----------------------------
+//13. В сценарии php-1-13.php создайте массив $sequence и заполните его первыми 10 элементами ряда,
+//общий член которого Un=1+n/n^2+1. Выберите третий элемент и поместите его в конец массива.
+//В окне обозревателя выведите исходный массив и массив, полученный после преобразования.
+
+
+
+//Un =1 +n;
+//Un общий член
+//1 + n элемент ряда
+//^ степень числа
+//2 в степени 2 = 4 тоже самое 2^2=4
+
+
+//$sequence = [];
+//for($i = 1;$i <= 10;$i++){
+/////формула
+//    $path1 = 1 + $i;
+//     $path2 = pow( $i,3);
+//      $Un = round($path1 / $path2,2) ;
+//
+////добавляем в массив
+//    $sequence [] .= $Un;
+//}
+//    //создаем новый массив копия старого
+//    $sequenceNew = $sequence;
+//    $tree = $sequenceNew[2]; // выбираем третий элемент массива
+//    unset($sequenceNew[2]); // удаляем третий элемент массива
+//    $sequenceNew [] .=$tree; //записываем в конец ового масссива елемент 3
+//
+//
+//    echo "<table>";
+//    echo "<tr>";// tr строка
+//    foreach($sequence as $elem){
+//
+//        echo "<td>$elem</td>";// ячейка
+//    }
+//echo "</tr>";
+//echo "<tr>";
+//
+//foreach ($sequenceNew as $elem){
+//    echo "<td>$elem</td>";
+//}
+//echo "<tr>";
+//    echo "</table>";
+
+
+//--------------------------------------------------
+
+
+//тренировка по созданию  таблиц
+
+//     echo "<table>";
+//
+//
+//     for($n = 1;$n <= 10;$n++){
+//         echo "<tr>";
+//         for($i = 1;$i <= 6;$i++){
+//             echo"<td> x</td>";
+//         }
+//         echo "</tr>";
+//     }
+//
+//     echo "</table>";
+//
+//----------------------------------
+
+// создать функцую вывоа таблицы ;$a  кол-во строк $b кол рядов
+//     function add55($a,$b){
+//
+//         echo "<table>";
+//
+//
+//         for($n = 1;$n <= $b;$n++){
+//             echo "<tr>";
+//             for($i = 1;$i <= $a;$i++){
+//                 echo"<td>" .  mt_rand(10,100)."</td>";
+//             }
+//             echo "</tr>";
+//         }
+//
+//         echo "</table>";
+//
+//
+//     }
+//
+//   add55(10, 10);
+
+     //-----------------------------
+
+
+//Таблица умножения
+
+//$cols = 10;
+//$rows = 10;
+////$td = 1;
+//$tr = 1;
+//echo "<table border='1'>" ;
+//
+//while($tr <= $rows){
+//    echo "<tr>" ;
+//    $td=1;
+//    while ($td <= $cols){
+//        echo "<td>".$tr*$td."</td>";
+//        $td++;
+//    }
+//    echo "</tr>";
+//    $tr++ ;
+//}
+//echo "</table>" ;
+
+
+
+//
+//$cols = 100;
+//$rows = 10;
+//echo "<table border ='1'>";  //добавляет границу
+//
+//
+//for($i = 1; $i <= $cols;$i++){ //запуск 1 го цикла
+//    echo"<tr>"; // открываем строку
+//    for($n = 1;$n <= $rows;$n++){ //щапуск рекурсии (второго цыкла)
+//
+//        echo "<td>" . $i*$n . "</td>";//множим первое значение   первого цикла на
+//        // второе значения второго цикла
+//
+//    }
+//    echo "<tr>"; // закрываем строку
+//
+//}
 
 
 
 
 
-$k = 1;
-$v = 1;
-echo"<table style='text-align: center; border:1px solid red'>";
 
-foreach($arr as  $key => $value){
+//-------------------------
+
+//fibonachi
+
+//// через массивы
+//$array = array(0, 1);
+//for($i = 0;$i<10 -2;$i++)
+//    array_push($array, end($array) + prev($array));
+//print_r($array);
+
+//
+//$fibo1=0;
+//$fibo2=1;
+//
+//for ($i=0; $i<=100; $i++)  {
+//    $fibo=$fibo1+$fibo2;
+//    $fibo2=$fibo1;
+//    $fibo1=$fibo;
+//    print $fibo."<br>";
+//}
+//
 
 
-    echo "<tr>";
-        echo "<td style='font-size: 12px;'>" . "Key" . $k++ . "</td>";
-        echo "<td style='font-size: 12px;'>" . "value" . $v++;
-    echo "</tr>";
 
-    echo "<tr>";
-        echo "<td>" . $key . "</td>";
-        echo "<td>" . $value . "</td>";
-        echo "</tr>";
+//----------------------------------------
+
+//Создайте сценарий php-1-18.php, который позволит просмотреть содержимое
+//глобальной переменной$_SERVER. В случае возникновения ошибок должно быть выведено сообщение:
+
+//
+//echo "<table border='1'>";
+//foreach ( $_SERVER as  $key => $value){
+//
+//    echo"<tr><td>$key</td>";
+//    echo"<td>".$value."</td></tr>";
+//
+//
+//}
+//echo "</table>";
+
+//------------------------------
 
 
+//
+//Создайте сценарий php-1-14.php, определите в нем массив $sequence. Используя функцию rand,
+//заполните массив 10 элементами типа float. Для полученного массива вычислите и выведите в
+//обозревателе сумму квадратных корней из всех его элементов, не равных 3.
 
 
+//$sequence = []; // создаем массив
+//
+//for ($i = 0; $i < 10; $i++) { //добавляем  в массив
+//    $float = mt_rand(101, 999) / 100;
+//   // проверка на флоат
+//        array_push($sequence, $float);
+//            $result = '';
+//    foreach ($sequence as $value) { // перебираем масссив
+//
+//        $sqrt = sqrt($value); // вычесляем корень кажного значения
+//        if ($sqrt != 3) {// проверякм что бы квад. корень неавнля 3ж
+//
+//            $result +=  round($sqrt,2); //сумма корней, округляем
+//        }
+//    }
+//}
+//echo $result;
+//print_r(($sequence));
 
+//-------------------------------------------
 
-   //echo  "<td>" .$key . " " . $value . "</td> ";
+//В сценарии php-1-15.php создайте массив $sequence и заполните его 13 элементами ряда,
+//общий член которого Un=(n*5^n)/7^n. В массив $sequence1 поместите элементы массива $sequence,
+//стоящие на четных местах, а элементы, стоящие на нечетных местах, запишите в массив $sequence2.
 
+$sequence= [];
+$sequence1= [];
+$sequence2= [];
 
+for($i = 1;$i <= 13;$i++){
+
+    $path1 = $i * pow(5,$i);
+    $path2 =  pow(7,$i);
+    $Un = $path1 / $path2;
+    array_push($sequence,$Un);
 
 }
 
 
-echo"</table>";
+foreach($sequence as $key=>$value){
+
+     if($key % 2 == 0){
+         array_push($sequence1,$value);
+     } else {
+         array_push($sequence2,$value);
+     }
+}
+//print_r($sequence);
+//print_r($sequence1);
+//print_r($sequence2);
+
+
+
+// вывести два разных массива  одним циклом в табилу ввида --value1--value2--
+
+
+
+
 ?>
 
+
+<!--<table border="1">-->
+<!---->
+<!--   <tr> <td>1</td> <td>2</td></tr>-->
+<!--    <tr><td>1</td> <td>2</td></tr>-->
+<!--    <tr><td>1</td> <td>2</td></tr>-->
+<!--    <tr><td>1</td> <td>2</td></tr>-->
+<!--    <tr><td>1</td> <td>2</td></tr>-->
+<!--    <tr><td>1</td> <td>2</td></tr>-->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!--</table>-->
