@@ -1186,29 +1186,29 @@
 //В сценарии php-1-15.php создайте массив $sequence и заполните его 13 элементами ряда,
 //общий член которого Un=(n*5^n)/7^n. В массив $sequence1 поместите элементы массива $sequence,
 //стоящие на четных местах, а элементы, стоящие на нечетных местах, запишите в массив $sequence2.
+//
+//$sequence= [];
+//$sequence1= [];
+//$sequence2= [];
 
-$sequence= [];
-$sequence1= [];
-$sequence2= [];
-
-for($i = 1;$i <= 13;$i++){
-
-    $path1 = $i * pow(5,$i);
-    $path2 =  pow(7,$i);
-    $Un = $path1 / $path2;
-    array_push($sequence,$Un);
-
-}
-
-
-foreach($sequence as $key=>$value){
-
-     if($key % 2 == 0){
-         array_push($sequence1,$value);
-     } else {
-         array_push($sequence2,$value);
-     }
-}
+//for($i = 1;$i <= 13;$i++){
+//
+//    $path1 = $i * pow(5,$i);
+//    $path2 =  pow(7,$i);
+//    $Un = $path1 / $path2;
+//    array_push($sequence,$Un);
+//
+//}
+//
+//
+//foreach($sequence as $key=>$value){
+//
+//     if($key % 2 == 0){
+//         array_push($sequence1,$value);
+//     } else {
+//         array_push($sequence2,$value);
+//     }
+//}
 //print_r($sequence);
 //print_r($sequence1);
 //print_r($sequence2);
@@ -1217,9 +1217,63 @@ foreach($sequence as $key=>$value){
 
 // вывести два разных массива  одним циклом в табилу ввида --value1--value2--
 
+//. Поиск и сортировка
+//Дано массив целых чисел $a, отсортированный по возрастанию и некое число $b.
+//Написать функцию searchInArray($a, $b), которая максимально быстро определит
+// массиве искомый элемент и вернет TRUE либо FALSE
 
 
 
+function searchInArray ($arr,$n){
+
+
+    foreach ($arr as $value){
+
+        if($value == $n){
+
+            return true;
+
+        }else {return false;}
+           }
+
+//    if(empty($flag)){
+//        return false;
+//             }else{return true;}
+
+}
+
+
+//$arr = [1,2,3,4,5,6,7,3];
+//$n = 10;
+//
+//var_dump(searchInArray($arr,$n));
+////var_dump($arr);
+
+
+//функция выводит каталоги
+function showDir ($str){
+
+    $dir  = scandir($str);
+    $dir = array_diff($dir , array('.','..'));
+
+    //var_dump($dir);
+
+echo "<ul>";
+
+    foreach ($dir as $value){
+       echo $path = $str . "/".$value;
+        echo '<li>' . $value; ;
+        if(is_dir($path)){
+            showDir($path);
+        }
+        echo'</li>';
+    }
+
+    echo "</ul>";
+
+
+}
+showDir('./');
 ?>
 
 
