@@ -1090,7 +1090,7 @@
 
 
 
-//
+////
 //$cols = 100;
 //$rows = 10;
 //echo "<table border ='1'>";  //добавляет границу
@@ -1186,29 +1186,29 @@
 //В сценарии php-1-15.php создайте массив $sequence и заполните его 13 элементами ряда,
 //общий член которого Un=(n*5^n)/7^n. В массив $sequence1 поместите элементы массива $sequence,
 //стоящие на четных местах, а элементы, стоящие на нечетных местах, запишите в массив $sequence2.
+//
+//$sequence= [];
+//$sequence1= [];
+//$sequence2= [];
 
-$sequence= [];
-$sequence1= [];
-$sequence2= [];
-
-for($i = 1;$i <= 13;$i++){
-
-    $path1 = $i * pow(5,$i);
-    $path2 =  pow(7,$i);
-    $Un = $path1 / $path2;
-    array_push($sequence,$Un);
-
-}
-
-
-foreach($sequence as $key=>$value){
-
-     if($key % 2 == 0){
-         array_push($sequence1,$value);
-     } else {
-         array_push($sequence2,$value);
-     }
-}
+//for($i = 1;$i <= 13;$i++){
+//
+//    $path1 = $i * pow(5,$i);
+//    $path2 =  pow(7,$i);
+//    $Un = $path1 / $path2;
+//    array_push($sequence,$Un);
+//
+//}
+//
+//
+//foreach($sequence as $key=>$value){
+//
+//     if($key % 2 == 0){
+//         array_push($sequence1,$value);
+//     } else {
+//         array_push($sequence2,$value);
+//     }
+//}
 //print_r($sequence);
 //print_r($sequence1);
 //print_r($sequence2);
@@ -1217,24 +1217,207 @@ foreach($sequence as $key=>$value){
 
 // вывести два разных массива  одним циклом в табилу ввида --value1--value2--
 
+//. Поиск и сортировка
+//Дано массив целых чисел $a, отсортированный по возрастанию и некое число $b.
+//Написать функцию searchInArray($a, $b), которая максимально быстро определит
+// массиве искомый элемент и вернет TRUE либо FALSE
 
 
 
-?>
+//function searchInArray ($arr,$n){
+//
+//
+//    foreach ($arr as $value){
+//
+//        if($value == $n){
+//
+//            return true;
+//
+//        }else {return false;}
+//           }
+
+//    if(empty($flag)){
+//        return false;
+//             }else{return true;}
+
+//}
 
 
-<!--<table border="1">-->
-<!---->
-<!--   <tr> <td>1</td> <td>2</td></tr>-->
-<!--    <tr><td>1</td> <td>2</td></tr>-->
-<!--    <tr><td>1</td> <td>2</td></tr>-->
-<!--    <tr><td>1</td> <td>2</td></tr>-->
-<!--    <tr><td>1</td> <td>2</td></tr>-->
-<!--    <tr><td>1</td> <td>2</td></tr>-->
-<!---->
-<!---->
-<!---->
-<!---->
-<!---->
-<!---->
-<!--</table>-->
+//$arr = [1,2,3,4,5,6,7,3];
+//$n = 10;
+//
+//var_dump(searchInArray($arr,$n));
+////var_dump($arr);
+
+
+//функция выводит каталоги
+//function showDir ($str){
+//
+//    $dir  = scandir($str);
+//    $dir = array_diff($dir , array('.','..'));
+//
+//    //var_dump($dir);
+//
+//echo "<ul>";
+//
+//    foreach ($dir as $value){
+//        $path = $str . "/".$value;
+//        echo '<li>' . $value; ;
+//        if(is_dir($path)){
+//            showDir($path);
+//        }
+//        echo'</li>';
+//    }
+//    echo "</ul>";
+//}
+//
+//showdir('../');
+
+
+//showDir('./');
+// написать функция которая опреледяет простое число или нет
+//function simple($n){
+//    $arr = [];
+//
+//    for($i = 1;$i <=$n;$i++){
+//
+//        if($n % $i== 0){
+//            $arr[] .=$i;
+//        }
+//
+//    } if (count($arr)== 2){
+//        echo "number simple";
+//        }else{
+//            echo "number not simple";
+//        }
+//    }
+
+//
+//simple(12);
+
+// на писать функцию котороя выводит все делители числа
+
+//function delitel($n)
+//{
+//    $arr = [];
+//    for ($i = 1; $i <= $n; $i++) {
+//
+//        if ($n % $i == 0) {
+//            $arr [] .= $i;
+//        }
+//    }return $arr;
+//}
+//
+//var_dump(delitel(200));
+//Создайте сценарий php-1-03.php, который для чисел 518 и 37 находит
+//наибольший общий делитель и выводит в строке обозревателя сообщение вида
+//"Наибольший общий делитель чисел 518 и 37 равен Result.",
+//где Result - наибольший общий делитель заданных чисел.
+//
+//function minDelit($a,$b){
+//    $n = $a;
+//        if($a > $b){
+//        $n = $b;
+//    }
+//    for($i = $n;$i >=1;$i--){
+//
+//        if($a % $i == 0 & $b % $i == 0){
+//              $result = $i;break;
+//        }
+//    }
+//    return "наибольши делитель $a и $b равен $result";
+//}
+//
+//
+//echo minDelit(36,48);
+
+
+
+
+function greateTelNumber (){
+
+    $str = "+7-";
+
+    for($i = 0; $i < 10;$i++){
+        if(strlen($str) == 3 ){
+            $str .= "(";
+        }
+        if(strlen ($str) == 7){
+            $str .= ")-";
+        }
+        if(strlen ($str) == 12){
+            $str .= "-";
+        }
+        if(strlen ($str) == 15){
+            $str .= "-";
+        }
+
+
+        $str .= rand(1,9);
+    }
+     return $str;
+
+}
+
+
+
+
+echo greateTelNumber();
+
+
+$host = "127.0.0.1";
+$dbname = "number";
+$user = "tsybin";
+$password = "111";
+
+$name = 'vasy';
+$number = greateTelNumber();
+
+
+ $db = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
+
+
+
+
+
+
+    $name = 'vasy';
+    $number = greateTelNumber();
+
+    try{
+        $stmt = $db->prepare("INSERT INTO users (name,number) VALUES (?,?)");
+        $stmt->execute(array(
+                $name,
+                $number)
+        );
+
+    }catch (PDOException $e) {
+        echo 'Error : ' . $e->getMessage();
+    }
+
+
+
+
+
+
+
+
+
+$arr = ['Андрей', 'Алина', 'Борис', 'Владимир', 'Яна'];
+
+$last_char = '';
+
+foreach($arr as $v)
+{
+    $current_char = mb_substr($v, 0, 1);
+
+    if($current_char !== $last_char)
+    {
+        echo $current_char . '<br>';
+        $last_char = $current_char;
+    }
+
+    echo $v . '<br>';
+}
+
+
