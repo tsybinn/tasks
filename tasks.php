@@ -1222,6 +1222,7 @@
 //Написать функцию searchInArray($a, $b), которая максимально быстро определит
 // массиве искомый элемент и вернет TRUE либо FALSE
 
+<<<<<<< HEAD
 
 
 //function searchInArray ($arr,$n){
@@ -1337,6 +1338,8 @@
 function greateTelNumber (){
 
     $str = "+7-";
+=======
+>>>>>>> 24b37e2985393ed2b93ae6bde061a1fc1b74509e
 
     for($i = 0; $i < 10;$i++){
         if(strlen($str) == 3 ){
@@ -1352,15 +1355,41 @@ function greateTelNumber (){
             $str .= "-";
         }
 
+<<<<<<< HEAD
 
         $str .= rand(1,9);
     }
      return $str;
 
+=======
+function searchInArray ($arr,$n){
+
+
+    foreach ($arr as $value){
+
+        if($value == $n){
+
+            return true;
+
+        }else {return false;}
+           }
+
+//    if(empty($flag)){
+//        return false;
+//             }else{return true;}
+
+>>>>>>> 24b37e2985393ed2b93ae6bde061a1fc1b74509e
 }
 
 
+//$arr = [1,2,3,4,5,6,7,3];
+//$n = 10;
+//
+//var_dump(searchInArray($arr,$n));
+////var_dump($arr);
 
+
+<<<<<<< HEAD
 //
 //$number =  greateTelNumber();
 //
@@ -1429,11 +1458,37 @@ $name = 'vasy';
 
 
 
+=======
+//функция выводит каталоги
+function showDir ($str){
+>>>>>>> 24b37e2985393ed2b93ae6bde061a1fc1b74509e
 
+    $dir  = scandir($str);
+    $dir = array_diff($dir , array('.','..'));
 
+    //var_dump($dir);
 
+echo "<ul>";
 
+<<<<<<< HEAD
 // вывести массив вида
+=======
+    foreach ($dir as $value){
+       echo $path = $str . "/".$value;
+        echo '<li>' . $value; ;
+        if(is_dir($path)){
+            showDir($path);
+        }
+        echo'</li>';
+    }
+
+    echo "</ul>";
+
+
+}
+showDir('./');
+?>
+>>>>>>> 24b37e2985393ed2b93ae6bde061a1fc1b74509e
 
 // А
 // Андрей
