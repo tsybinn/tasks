@@ -6,7 +6,7 @@
 //mb_strlen();//кирилица
 //trim();// отрезание пробеловж
 //preg_match(); //возвращает количество найденных соответствий.
-//str_replace(); //возвращает строку, полученную в результате замены.
+//str_replace(); //возвращает строку, полученную в результате замены. array(что изменить);
 ////  htmlspecialchars() // удаляет html теги;
 //strtolower();//npeo6pa3yeT CTPOKY  $st B HHlKHHH perHCTP.  803epamaeT pe3yJibTaT nepeeo.ua.
 // ucfirst() ;//Tpeo6paJyeT e eepxuuii perHCTP TOJibKO  nepeyio 6YKBY e CTPOKe  $st, He TJ>OrwI  OCTaJibHbie.

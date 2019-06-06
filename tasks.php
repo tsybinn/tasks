@@ -1332,7 +1332,7 @@
 //echo minDelit(36,48);
 
 
-
+// создает телефонные номара в формате +7-910-233-22-22
 
 function greateTelNumber (){
 
@@ -1361,8 +1361,14 @@ function greateTelNumber (){
 
 
 
+//
+//$number =  greateTelNumber();
+//
+//echo str_replace(array('+','(',')','-'), '', $number); // оставляем одни цыфрыб в массиве array лежит
+// то что нужно убрать
 
-echo greateTelNumber();
+
+
 
 
 $host = "127.0.0.1";
@@ -1371,53 +1377,88 @@ $user = "tsybin";
 $password = "111";
 
 $name = 'vasy';
-$number = greateTelNumber();
+//$number = greateTelNumber();
 
 
  $db = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
 
+//for($i = 1;$i <=100;$i++){
+//    $stmt = $db->prepare("SELECT number FROM  users WHERE idUser=$i");
+//    $stmt->execute();
+//    $arr = $stmt ->fetchAll(PDO::FETCH_COLUMN, 0);
+//    $number = str_replace(array('+','(',')','-'),'', $arr[0]);
+//
+//    $sql = "UPDATE users SET number=?  WHERE idUser=$i;";
+//
+//    try{
+//        $stmt = $db->prepare($sql);
+//        $stmt->execute(array(
+//                $number,
+//            )
+//        );
+//
+//    }catch (PDOException $e) {
+//        echo 'Error : ' . $e->getMessage();
+//    }
+//
+//
+//
+//}
+
+
+
+
+//
+//for($i = 0;$i < 100;$i++){
+//    $name = 'vasy';
+//    $number = greateTelNumber();
+//
+//    try{
+//        $stmt = $db->prepare("INSERT INTO users (name,number) VALUES (?,?)");
+//        $stmt->execute(array(
+//                $name,
+//                $number)
+//        );
+//
+//    }catch (PDOException $e) {
+//        echo 'Error : ' . $e->getMessage();
+//    }
+//
+//}
 
 
 
 
 
-    $name = 'vasy';
-    $number = greateTelNumber();
-
-    try{
-        $stmt = $db->prepare("INSERT INTO users (name,number) VALUES (?,?)");
-        $stmt->execute(array(
-                $name,
-                $number)
-        );
-
-    }catch (PDOException $e) {
-        echo 'Error : ' . $e->getMessage();
-    }
 
 
 
+// вывести массив вида
 
-
-
-
-
-
-$arr = ['Андрей', 'Алина', 'Борис', 'Владимир', 'Яна'];
-
-$last_char = '';
-
-foreach($arr as $v)
-{
-    $current_char = mb_substr($v, 0, 1);
-
-    if($current_char !== $last_char)
-    {
-        echo $current_char . '<br>';
-        $last_char = $current_char;
-    }
-
-    echo $v . '<br>';
-}
-
+// А
+// Андрей
+// Алина
+// Б
+// Борис
+// В
+// Владимир
+// Я
+// Я на
+//$arr = ['Андрей', 'Алина','Андрей', 'Алина', 'Борис', 'Владимир', 'Яна'];
+//
+//$lastLetter = ''; //последняя буква
+//
+//foreach($arr as $v)
+//{
+//    $nowLetter= mb_substr($v, 0, 1); //// берем первую букву
+//
+//    if($nowLetter !== $lastLetter) // если первая буква не равна последней
+//    {
+//        echo $nowLetter . '<br>'; // пишем первую букву
+//        $lastLetter = $nowLetter; //последняя буква равна первой букве
+//    }
+//
+//    echo $v . '<br>';
+//}
+//
 
