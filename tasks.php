@@ -1298,6 +1298,7 @@
 
 // на писать функцию котороя выводит все делители числа
 
+<<<<<<< HEAD
 //function delitel($n)
 //{
 //    $arr = [];
@@ -1373,13 +1374,30 @@ function searchInArray ($arr,$n){
 
         }else {return false;}
            }
+=======
+//function searchInArray ($arr,$n){
+//
+//
+//    foreach ($arr as $value){
+//
+//        if($value == $n){
+//
+//            return true;
+//
+//        }else {return false;}
+//           }
+>>>>>>> 0512241c7a17b2f094aa986b9a094d3d2ff81973
 
 //    if(empty($flag)){
 //        return false;
 //             }else{return true;}
 
+<<<<<<< HEAD
 >>>>>>> 24b37e2985393ed2b93ae6bde061a1fc1b74509e
 }
+=======
+//}
+>>>>>>> 0512241c7a17b2f094aa986b9a094d3d2ff81973
 
 
 //$arr = [1,2,3,4,5,6,7,3];
@@ -1460,16 +1478,95 @@ $name = 'vasy';
 
 =======
 //функция выводит каталоги
+<<<<<<< HEAD
 function showDir ($str){
 >>>>>>> 24b37e2985393ed2b93ae6bde061a1fc1b74509e
+=======
+//function showDir ($str){
+//
+//    $dir  = scandir($str);
+//    $dir = array_diff($dir , array('.','..'));
+//
+//    //var_dump($dir);
+//
+//echo "<ul>";
+//
+//    foreach ($dir as $value){
+//        $path = $str . "/".$value;
+//        echo '<li>' . $value; ;
+//        if(is_dir($path)){
+//            showDir($path);
+//        }
+//        echo'</li>';
+//    }
+//    echo "</ul>";
+//}
+//
+//showdir('../');
+>>>>>>> 0512241c7a17b2f094aa986b9a094d3d2ff81973
 
-    $dir  = scandir($str);
-    $dir = array_diff($dir , array('.','..'));
 
-    //var_dump($dir);
+//showDir('./');
+// написать функция которая опреледяет простое число или нет
+//function simple($n){
+//    $arr = [];
+//
+//    for($i = 1;$i <=$n;$i++){
+//
+//        if($n % $i== 0){
+//            $arr[] .=$i;
+//        }
+//
+//    } if (count($arr)== 2){
+//        echo "number simple";
+//        }else{
+//            echo "number not simple";
+//        }
+//    }
 
-echo "<ul>";
+//
+//simple(12);
 
+// на писать функцию котороя выводит все делители числа
+
+//function delitel($n)
+//{
+//    $arr = [];
+//    for ($i = 1; $i <= $n; $i++) {
+//
+//        if ($n % $i == 0) {
+//            $arr [] .= $i;
+//        }
+//    }return $arr;
+//}
+//
+//var_dump(delitel(200));
+//Создайте сценарий php-1-03.php, который для чисел 518 и 37 находит
+//наибольший общий делитель и выводит в строке обозревателя сообщение вида
+//"Наибольший общий делитель чисел 518 и 37 равен Result.",
+//где Result - наибольший общий делитель заданных чисел.
+//
+//function minDelit($a,$b){
+//    $n = $a;
+//        if($a > $b){
+//        $n = $b;
+//    }
+//    for($i = $n;$i >=1;$i--){
+//
+//        if($a % $i == 0 & $b % $i == 0){
+//              $result = $i;break;
+//        }
+//    }
+//    return "наибольши делитель $a и $b равен $result";
+//}
+//
+//
+//echo minDelit(36,48);
+
+
+// создает телефонные номара в формате +7-910-233-22-22
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 // вывести массив вида
 =======
@@ -1478,17 +1575,114 @@ echo "<ul>";
         echo '<li>' . $value; ;
         if(is_dir($path)){
             showDir($path);
+=======
+function greateTelNumber (){
+
+    $str = "+7-";
+
+    for($i = 0; $i < 10;$i++){
+        if(strlen($str) == 3 ){
+            $str .= "(";
         }
-        echo'</li>';
+        if(strlen ($str) == 7){
+            $str .= ")-";
+        }
+        if(strlen ($str) == 12){
+            $str .= "-";
+        }
+        if(strlen ($str) == 15){
+            $str .= "-";
+>>>>>>> 0512241c7a17b2f094aa986b9a094d3d2ff81973
+        }
+
+
+        $str .= rand(1,9);
     }
-
-    echo "</ul>";
-
+     return $str;
 
 }
+<<<<<<< HEAD
 showDir('./');
 ?>
 >>>>>>> 24b37e2985393ed2b93ae6bde061a1fc1b74509e
+=======
+
+
+
+//
+//$number =  greateTelNumber();
+//
+//echo str_replace(array('+','(',')','-'), '', $number); // оставляем одни цыфрыб в массиве array лежит
+// то что нужно убрать
+
+
+
+
+
+$host = "127.0.0.1";
+$dbname = "number";
+$user = "tsybin";
+$password = "111";
+
+$name = 'vasy';
+//$number = greateTelNumber();
+
+
+ $db = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
+
+//for($i = 1;$i <=100;$i++){
+//    $stmt = $db->prepare("SELECT number FROM  users WHERE idUser=$i");
+//    $stmt->execute();
+//    $arr = $stmt ->fetchAll(PDO::FETCH_COLUMN, 0);
+//    $number = str_replace(array('+','(',')','-'),'', $arr[0]);
+//
+//    $sql = "UPDATE users SET number=?  WHERE idUser=$i;";
+//
+//    try{
+//        $stmt = $db->prepare($sql);
+//        $stmt->execute(array(
+//                $number,
+//            )
+//        );
+//
+//    }catch (PDOException $e) {
+//        echo 'Error : ' . $e->getMessage();
+//    }
+//
+//
+//
+//}
+
+
+
+
+//
+//for($i = 0;$i < 100;$i++){
+//    $name = 'vasy';
+//    $number = greateTelNumber();
+//
+//    try{
+//        $stmt = $db->prepare("INSERT INTO users (name,number) VALUES (?,?)");
+//        $stmt->execute(array(
+//                $name,
+//                $number)
+//        );
+//
+//    }catch (PDOException $e) {
+//        echo 'Error : ' . $e->getMessage();
+//    }
+//
+//}
+
+
+
+
+
+
+
+
+// вывести массив вида
+>>>>>>> 0512241c7a17b2f094aa986b9a094d3d2ff81973
 
 // А
 // Андрей
